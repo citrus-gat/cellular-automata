@@ -27,8 +27,8 @@ def main():
         # Come to live if it has exactly 3 living neighbors
         return neighbor_count(x, y) == 3
     
-    def is_still_live(x, y):
-        # Still live if it has 2 or 3 living neighbors
+    def is_stay_live(x, y):
+        # Stay live if it has 2 or 3 living neighbors
         nb_count = neighbor_count(x, y)
         return nb_count == 2 or nb_count == 3
     
@@ -60,7 +60,7 @@ def main():
             for x in range(len(grid[0])):
                 if grid[x][y] == 0 and is_become_live(x,y):
                     grid_next[x][y] = 1
-                if grid[x][y] == 1 and not is_still_live(x, y):
+                if grid[x][y] == 1 and not is_stay_live(x, y):
                     grid_next[x][y] = 0
         grid = grid_next
 
