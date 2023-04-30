@@ -14,23 +14,23 @@ def main():
         prog='onedca',
         description='One dimensional cellular automaton.')
     parser.add_argument('-r', '--rule', dest='rule', type=int, default=122, 
-                        help='the rule for the cellular automaton.')
+                        help='the rule for the cellular automaton (default: rule 122)')
     parser.add_argument('-w', '--width', dest='width', type=int, default=15,
                         help='the width of the board (default: 15)')
     parser.add_argument('-s', '--step', dest='step', type=int, default=15, 
                         help='number of steps or iteration (default: 15)')
-    parser.add_argument('-b', '--boundary', dest='boundary', type=int, default=0, choices=[0,1,2], 
-                        help='the boundary behavior.\n\
-                            \t 0 - ignore boundary; \n\
-                            \t 1 - treat out-of-bound cells as empty; \n\
-                            \t 2 - wrap the boundary as a circular array')
+    # parser.add_argument('-b', '--boundary', dest='boundary', type=int, default=0, choices=[0,1,2], 
+    #                     help='the boundary behavior.\n\
+    #                         \t 0 - ignore boundary; \n\
+    #                         \t 1 - treat out-of-bound cells as empty; \n\
+    #                         \t 2 - wrap the boundary as a circular array')
     args = parser.parse_args()
 
     width = args.width
     center = int(width/2) + 1
     step = args.step
     rule = args.rule
-    boundary = args.boundary
+    # boundary = args.boundary
 
     initial_pattern = [0]*width 
     initial_pattern[center] = 1
@@ -54,6 +54,7 @@ def main():
             row[j] = n_digit_of_bin(rule, pattern)
         
     # Visualize the matrix 
+    print('Rule', rule)
     for row in grid:
         for cell in row:
             symbol = '□' if cell == 0 else '■'
