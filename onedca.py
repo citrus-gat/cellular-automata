@@ -61,7 +61,7 @@ def main():
             row[j] = get_cell(*last_row[j-1:j+2], rule)
         
     # Visualize the matrix 
-    print('Rule', rule, '\t', )
+    print('Rule', rule, '   ', boundary_texts[boundary])
     for row in grid:
         for cell in row:
             symbol = '◻' if cell == 0 else '◼'
