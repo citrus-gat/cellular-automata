@@ -64,7 +64,7 @@ def main():
     print('Rule', rule, '\t', )
     for row in grid:
         for cell in row:
-            symbol = '□' if cell == 0 else '■'
+            symbol = '◻' if cell == 0 else '◼'
             print(symbol, end='')
         print()
 
