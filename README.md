@@ -42,7 +42,9 @@ Usages and help texts can be viewed in the `--help` or `-h` argument.
 
 ## Examples 
 
-```python3 onedca.py -r 30 -b 2```
+```
+python3 onedca.py -r 30 -b 2
+```
 
 Rule 30     wrap the boundary as a circular array\
 ◻◻◻◻◻◻◻◻◻◻◻◻◻◻◻◼◻◻◻◻◻◻◻◻◻◻◻◻◻◻◻\
@@ -63,7 +65,9 @@ Rule 30     wrap the boundary as a circular array\
 
 <br/>
 
-```python3 onedca.py -r 121```
+```
+python3 onedca.py -r 121
+```
 
 Rule 121     ignore boundary\
 ◻◻◻◻◻◻◻◻◻◻◻◻◻◻◻◼◻◻◻◻◻◻◻◻◻◻◻◻◻◻◻\
@@ -84,7 +88,9 @@ Rule 121     ignore boundary\
 
 <br/>
 
-```python3 onedca.py -r 121 -b 1```
+```
+python3 onedca.py -r 121 -b 1
+```
 
 Rule 121     treat out-of-bound cells as empty\
 ◻◻◻◻◻◻◻◻◻◻◻◻◻◻◻◼◻◻◻◻◻◻◻◻◻◻◻◻◻◻◻\
@@ -105,7 +111,9 @@ Rule 121     treat out-of-bound cells as empty\
 
 <br/>
 
-```python3 onedca.py -r 121 -b 2```
+```
+python3 onedca.py -r 121 -b 2
+```
 
 Rule 121     wrap the boundary as a circular array\
 ◻◻◻◻◻◻◻◻◻◻◻◻◻◻◻◼◻◻◻◻◻◻◻◻◻◻◻◻◻◻◻\
